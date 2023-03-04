@@ -20,9 +20,11 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, todoReducer);
+console.log(persistConfig);
 
 export const store = configureStore({
     reducer: persistedReducer,
+    
    
      middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
