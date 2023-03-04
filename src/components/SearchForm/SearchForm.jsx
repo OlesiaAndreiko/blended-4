@@ -6,11 +6,14 @@ import { FormBtn, InputSearch, SearchFormStyled } from './SearchForm.styled';
 import { nanoid } from 'nanoid';
 
 export const SearchForm = () => {
-  const [query, setQuery] = useState();
+
+  const [query, setQuery] = useState('');
   const dispatch = useDispatch();
 
   const handleInput = e => {
+    console.log(e.currentTarget.value);
     setQuery(e.currentTarget.value);
+
   };
 
   const handleSubmit = e => {
